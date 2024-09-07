@@ -14,6 +14,7 @@ vercel.json
 /serverSide/
 /routes/
 /database/
+/middleware/
 /public/js/
 /public/otherPages/devpages/.js
 /public/otherPages/important/.js
