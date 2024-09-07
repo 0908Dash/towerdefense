@@ -1,18 +1,20 @@
 # Sensitive files
 EXTREMESENSITVITY.json
+Dash0908.jsonc
 
 # Node modules
 node_modules/
 
 # Build directories
 /.vercel/
+vercel.json
 
 # Server and routes
 /server.js
 /serverSide/
 /routes/
 /database/
-/public/.js
+/public/js/
 /bot/
 
 # Others
