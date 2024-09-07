@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self';">
+  <title>Console Layout</title>
+  <link rel="icon" href="fav.ico" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="./css/console.css" />
+  <link rel="stylesheet" type="text/css" href="./css/all.css" />
+  <script src="./js/all.js"></script>
+  <script src="./js/console.js" defer></script>
+</head>
+
+<body>
+  <div id="wrapper">
+    <div id="headerwrap">
+      <div id="header">
+        <div id="top" class="header-container">
+          <h1 id="title" class="title">Tower Defense: 1.0 Console</h1>
+          <a id="profile-link" href="#">
+            <img
+              src="https://tinyurl.com/default-pic"
+              alt="Anonymous Profile Picture" id="profile-pic">
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div id="navigationwrap">
+      <div id="navigation">
+        <nav id="menu">
+          <input type="checkbox" id="responsive-menu" onclick="updatemenu()">
+          <label for="responsive-menu">&#9776;</label> <!-- Menu icon for responsive design -->
+          <ul>
+            <li><a href="./play.html">PLAY</a></li>
+            <li><a href="./home.html">HOME</a></li>
+            <li class="dropdown-arrow" id="loggedIn"> <!-- the loggedIn id is for when people are logged in theses options are shown -->
+              <a href="./store.html">STORE</a>
+              <ul class="sub-menus">
+                  <li><a href="./store.html/#GEMS">GEMS</a></li>
+                  <li><a href="./store.html/#COINS">COINS</a></li>
+              </ul>
+          </li>
+          <li><a href="./redeem.html">REDEEM</a></li>
+          <li id="adminPage" class="adminPage"><a href="./codesList.html">CODESLIST</a></li> <!-- isAdmin true only -->
+      </ul>
+        </nav>
+      </div>
+    </div>
+
+    <div id="leftcolumnwrap">
+      <div id="leftcolumn">
+        <nav class="sidebar">
+          <ul>
+            <li><a href="#" data-target="all" id="dropdown-arrow">Console</a>
+              <ul class="sub-menu">
+                <li><a href="#" data-target="all">All</a></li>
+                <li><a href="#" data-target="HTTP-Server">HTTP Server</a></li>
+                <li><a href="#" data-target="Discord-bot">Discord Bot</a></li>
+              </ul>
+            </li>
+            <li><a href="#" data-target="Cmds-List">Cmds List</a></li>
+            <li><a href="#" data-target="Analytics">Analytics</a></li>
+            <li><a href="#" data-target="Bot-Files">Bot Files</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <div id="contentwrap">
+      <div id="content">
+        <!-- Sections will be generated and managed by JS -->
+        <p>This is the content area.</p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

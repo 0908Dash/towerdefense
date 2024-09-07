@@ -1,0 +1,19 @@
+# Sensitive files
+EXTREMESENSITVITY.json
+
+# Node modules
+node_modules/
+
+# Build directories
+/.vercel/
+
+# Server and routes
+/server.js
+/serverSide/
+/routes/
+/database/
+/public/.js
+/bot/
+
+# Others
+.txt

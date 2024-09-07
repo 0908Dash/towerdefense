@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self';">
+    <title>Store - Tower Defense Game</title>
+    <link rel="icon" href="fav.ico" type="image/x-icon"> <!-- Link to your favicon -->
+    <link rel="stylesheet" href="./css/all.css">
+    <link rel="stylesheet" href="./css/store.css"> <!-- Link to your CSS file -->
+    <script src="./js/all.js"></script>
+    <script defer src="./js/store.js"></script> <!-- Link to your JavaScript file -->
+</head>
+<body>
+    <div id="top" class="header-container">
+        <h1 id="title" class="title">Tower Defense: 1.0</h1>
+        <a href="./signUp.html">
+            <img src="https://th.bing.com/th/id/R.d7a9c2922fe59854c0ad52ad8f51acfd?rik=FuqyLl8ylPr5Ig&riu=http%3a%2f%2fcdn.onlinewebfonts.com%2fsvg%2fimg_173956.png&ehk=PFTiIe2UzM0V4UuMM9ISmcV379eAhtrDQlB%2fKy8hIdc%3d&risl=&pid=ImgRaw&r=0" alt="Anonymous Profile Picture" id="profile-pic">
+        </a>        
+    </div>
+    <nav id="menu">
+        <input type="checkbox" id="responsive-menu" onclick="updatemenu()">
+        <label for="responsive-menu">&#9776;</label> <!-- Menu icon for responsive design -->
+        <ul>
+            <li><a href="./play.html">PLAY</a></li>
+            <li><a href="./home.html">HOME</a></li>
+            <li class="dropdown-arrow" id="loggedIn"> <!-- the loggedIn id is for when people are logged in theses options are shown -->
+                <a href="./store.html">STORE</a>
+                <ul class="sub-menus">
+                    <li><a href="./store.html/#GEMS">GEMS</a></li>
+                    <li><a href="./store.html/#COINS">COINS</a></li>
+                </ul>
+            </li>
+            <li><a href="./redeem.html">REDEEM</a></li>
+            <li id="adminPage" class="adminPage"><a href="./codesList.html">CODESLIST</a></li> <!-- isAdmin true only -->
+        </ul>
+    </nav>
+    <div id="GEMS">
+        
+    </div>
+</body>

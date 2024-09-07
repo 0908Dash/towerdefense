@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self';">
+  <title>Sign In</title>
+  <link rel="stylesheet" href="./css/signIn.css"> <!-- Link to your CSS file -->
+  <script src="./js/signIn.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Sign In</h1>
+    <form id="signInForm">
+      <label for="usernameOrEmail">Username or Email:</label>
+      <input type="text" id="usernameOrEmail" name="usernameOrEmail" required>
+      
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+      
+      <button type="submit">Sign In</button>
+    </form>
+    <p>Don't have an account? <a href="signUp.html">Sign Up</a></p>
+    <p><a href="forgotPassword.html">Forgot Password?</a></p>
+    
+    <!-- Discord Login Button -->
+    <div class="discord-login">
+      <a href="https://discord.com/oauth2/authorize?client_id=1280532684052893778&permissions=8&response_type=code&redirect_uri=https%3A%2F%2Ftower-defense-ten.vercel.app%2Fauth%2Fdiscord%2Fcallback&integration_type=1&scope=identify+email+guilds.join+bot">
+        <img src="https://th.bing.com/th/id/OIP.gkH10mIOrxSAfr-1ChhMpwHaHa?w=197&h=196&c=7&r=0&o=5&pid=1.7" alt="Sign in with Discord">
+        <span>Sign in with Discord</span>
+      </a>
+
+      <a href="https://discord.com/oauth2/authorize?client_id=1280532684052893778&permissions=8&response_type=code&redirect_uri=http%3A%2F%2Flocalhost%3A1024%2Fauth%2Fdiscord%2Fcallback&integration_type=1&scope=identify+email+guilds.join+bot">
+        <img src="https://th.bing.com/th/id/OIP.gkH10mIOrxSAfr-1ChhMpwHaHa?w=197&h=196&c=7&r=0&o=5&pid=1.7" alt="Sign in with Discord">
+        <span>Sign in with Discord</span>
+      </a>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,118 @@
+/* General styling for the body */
+body {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #333;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+/* Header styles */
+#headerwrap {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	padding: 10px;
+	z-index: 10;
+}
+#header {
+	height: 75px;
+}
+#title {
+	margin: 0;
+}
+/* Navigation bar styles */
+#navigationwrap {
+	width: 100%;
+	/* Adjust width based on sidebar width */
+	margin-left: 200px;
+	/* Leave space for the sidebar */
+	margin-top: 75px;
+	/* Position below the header */
+	position: fixed;
+	top: 75px;
+	/* Align with header */
+	border-radius: 10px;
+	z-index: 5;
+	/* Below the header */
+}
+#navigation {
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0 10px;
+}
+/* Sidebar styles */
+#leftcolumnwrap {
+	width: 110px;
+	position: fixed;
+	top: 155px;
+	/* Push down under the header */
+	left: 0;
+	bottom: 0;
+	/* Extend to the bottom of the viewport */
+	border-radius: 10px;
+	padding: 10px;
+	box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+#leftcolumn {
+	height: calc(100vh - 80px);
+	/* Full height minus header height */
+	overflow-y: auto;
+	/* Add vertical scroll if content overflows */
+}
+/* Sidebar links */
+.sidebar ul {
+	list-style-type: none;
+	padding: 0;
+}
+.sidebar ul li {
+	padding: 10px;
+}
+.sidebar ul li a {
+	text-align:left;
+	text-decoration: none;
+	display: block;
+}
+.sidebar ul li a:hover {
+	background-color: #ddd;
+}
+.sub-menu {
+	display: none;
+	margin-left: 15px;
+}
+#dropdown-arrow:hover .sub-menu {
+	display: block;
+}
+/* Content area styling */
+#contentwrap {
+	margin-left: 200px;
+	/* Leave space for the sidebar */
+	margin-top: 115px;
+	/* Ensure it clears the fixed header and navigation */
+	padding: 20px;
+	flex: 1;
+}
+#content {
+	border-radius: 10px;
+	padding: 20px;
+	max-height: 400px;
+	/* Define the max height of the console */
+	overflow-y: auto;
+	/* Add vertical scroll if content overflows */
+}
+/* Optional scrollbar styling (for webkit-based browsers) */
+#content::-webkit-scrollbar {
+	width: 8px;
+}
+#content::-webkit-scrollbar-thumb {
+	background-color: #888;
+	border-radius: 4px;
+}
+#content::-webkit-scrollbar-thumb:hover {
+	background-color: #555;
+}

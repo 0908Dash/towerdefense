@@ -1,0 +1,273 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/* Default theme (light) */
+:root {
+  --bg-color: white;
+  --text-color: black;
+}
+
+/* Dark theme */
+[data-theme='dark'] {
+  --bg-color: #333;
+  --text-color: #fff;
+}
+
+/* Light theme */
+[data-theme='light'] {
+  --bg-color: white;
+  --text-color: black;
+}
+
+/* System preference: dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+      --bg-color: #333;
+      --text-color: #fff;
+  }
+}
+
+/* System preference: light mode */
+@media (prefers-color-scheme: light) {
+  :root {
+      --bg-color: white;
+      --text-color: black;
+  }
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between; /* Aligns items on either side */
+  align-items: center; /* Centers items vertically */
+  padding: 10px;
+  background-color: #f4f4f4; /* Change as needed */
+  border-bottom: 1px solid #ddd; /* Optional for a bottom border */
+}
+
+#title {
+  text-align: center;
+  flex-grow: 1; /* Allows title to take available space and be centered */
+  margin: 0;
+}
+
+#profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; /* Makes it circular */
+  object-fit: cover; /* Ensures image covers the element */
+}
+
+#menu {
+  background: linear-gradient(to bottom, #00506A, #500080);
+  height: 45px;
+  border-radius: 0;
+  border: 5px solid #000000;
+  position: relative;
+  display: flex;
+  justify-content: center; /* Centering menu items horizontally */
+  align-items: center; /* Centering menu items vertically */
+}
+
+#menu ul, #menu li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#menu ul {
+  width: 100%;
+  display: flex; /* Display menu items in a row */
+  justify-content: center; /* Center menu items */
+  padding: 0;
+}
+
+#menu li {
+  display: inline-block;
+  position: relative;
+}
+
+#menu a {
+  display: block;
+  line-height: 35px;
+  padding: 0 14px;
+  text-decoration: none;
+  color: #FFFFFF;
+  font-size: 16px;
+}
+
+#menu a.dropdown-arrow:after {
+  content: "\2B9F";
+  margin-left: 5px;
+}
+
+#menu li a:hover {
+  color: #000000;
+  background: #F2F2F2;
+}
+
+#menu input {
+  display: none;
+  margin: 0;
+  padding: 0;
+  height: 45px;
+  width: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+#menu label {
+  display: none;
+  line-height: 35px;
+  text-align: center;
+  position: absolute;
+  left: 35px;
+}
+
+#menu label:before {
+  font-size: 1.6em;
+  color: #FFFFFF;
+  content: "\2261";
+  margin-left: 20px;
+}
+
+#menu ul.sub-menus {
+  height: auto;
+  overflow: hidden;
+  width: 170px;
+  background: #000000;
+  position: absolute;
+  z-index: 99;
+  display: none;
+}
+
+#menu ul.sub-menus li {
+  display: block;
+  text-align: left;
+  width: 100%;
+}
+
+#menu ul.sub-menus a {
+  color: #FFFFFF;
+  font-size: 16px;
+  text-transform: capitalize;
+}
+
+#menu li:hover ul.sub-menus {
+  display: block;
+}
+
+#menu ul.sub-menus a:hover {
+  background: #000000;
+  color: #FFFFFF;
+}
+
+/* Responsive design */
+@media screen and (max-width: 800px) {
+  .header-container {
+    flex-direction: column; /* Stack title and profile picture */
+  }
+
+  #menu {
+    flex-direction: column; /* Stack menu items vertically */
+  }
+
+  #menu ul {
+    background: #000000;
+    position: static; /* Remove absolute positioning */
+    height: auto;
+    display: block;
+    text-align: left;
+  }
+
+  #menu ul.sub-menus {
+    width: 100%;
+    position: static;
+  }
+
+  #menu ul.sub-menus a {
+    padding-left: 30px;
+  }
+
+  #menu li {
+    display: block;
+    width: auto;
+  }
+
+  #menu input, #menu label {
+    position: static; /* Reset positioning */
+  }
+
+  #menu input:checked + label {
+    color: #FFFFFF;
+  }
+
+  #menu input:checked + label:before {
+    content: "\00d7";
+  }
+
+  #menu input:checked ~ ul {
+    display: block;
+  }
+}
+
+/* Additional responsiveness for iPhone landscape mode and other devices */
+@media (max-width: 480px) {
+  #menu ul {
+    font-size: 14px;
+  }
+
+  #menu a {
+    padding: 0 10px;
+  }
+
+  #title {
+    font-size: 1.5em; /* Adjust font size if needed */
+  }
+
+  #profile-pic {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+#loggedIn, .loggedIn {
+  display: none;
+}
+ 
+#adminPage, .adminPage {
+  display: none;
+}
+
+/* Profile dropdown menu */
+#profile-dropdown {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+#profile-dropdown a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+#profile-dropdown a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown when hovering over the profile image */
+#profile-link:hover #profile-dropdown {
+  display: block;
+}

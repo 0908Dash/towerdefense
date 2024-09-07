@@ -1,0 +1,39 @@
+{
+  "_UUID": "000000000000000000",
+  "displayName": "Dash0908",
+  "irl_name": {
+    "first": "Randall",
+    "last": "Enfinger"
+  },
+  "login": {
+    "username": "Dash0908",
+    "email": "randydash304@gmail.com",
+    "password": "",
+    "pfpUrl": null,
+    "2FA": {
+      "totp_code": null, // needs to be generated
+      "on": false
+    },
+    "otherLoginWays": {
+      "discord": {
+        "linked":true,
+        "uuid": "728752269830520982",
+        "pfpUrl": "https://cdn.discordapp.com/avatars/728752269830520982/2d5aa905f43da96160f136802dc36091.webp?size=256",
+        "username": "dash0908",
+        "displayName": "Dash0908"
+      },
+      "spotify": {
+        "linked":false
+      }
+    }
+  },
+  "isAdmin": true,
+  "coins": 0,
+  "gems": 0,
+  "inTeam": true,
+  "teamInfo": {
+    "team_UUID": "111111111111111111",
+    "name": "TowerOfficial",
+    "members": 1
+  }
+}
