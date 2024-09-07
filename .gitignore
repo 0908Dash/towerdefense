@@ -15,6 +15,8 @@ vercel.json
 /routes/
 /database/
 /public/js/
+/public/otherPages/devpages/.js
+/public/otherPages/important/.js
 /bot/
 
 # Others
